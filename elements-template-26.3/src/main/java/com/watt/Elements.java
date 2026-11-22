@@ -1,11 +1,12 @@
 package com.watt;
 
-import net.fabricmc.api.ModInitializer;
-
-import net.minecraft.resources.Identifier;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.watt.item.ModItems;
+
+import net.fabricmc.api.ModInitializer;
+import net.minecraft.resources.Identifier;
 
 public class Elements implements ModInitializer {
 	public static final String MOD_ID = "elements";
@@ -17,10 +18,7 @@ public class Elements implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
+		ModItems.initialize();
 		LOGGER.info("Hello Fabric world!");
 	}
 
